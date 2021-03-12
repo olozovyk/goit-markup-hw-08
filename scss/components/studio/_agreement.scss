@@ -1,0 +1,50 @@
+.agreement {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 13px;
+}
+
+.agreement__checkbox {
+  @extend .visually-hidden;
+}
+
+.agreement__icon {
+  &--checked {
+    display: none;
+  }
+
+  .agreement__checkbox:checked ~ &--unchecked {
+    display: none;
+  }
+
+  .agreement__checkbox:checked ~ &--checked {
+    display: block;
+  }
+
+  .agreement:hover,
+  .agreement:hover & {
+    cursor: pointer;
+    fill: var(--accent-color);
+  }
+
+  .agreement__checkbox:focus ~ & {
+    fill: var(--accent-color);
+  }
+}
+
+.agreement__text {
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.agreement__link {
+  color: var(--accent-color);
+  text-decoration-line: underline;
+}

@@ -1,0 +1,36 @@
+.clients-list {
+  margin-right: -30px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clients-list__item {
+  margin-right: 30px;
+}
+
+.clients-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+
+  color: var(--team-svg-color);
+
+  border-radius: 4px;
+  border: 1px solid var(--team-svg-color);
+
+  transition: color var(--duration) var(--timing-function),
+    border-color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}

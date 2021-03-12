@@ -1,0 +1,25 @@
+@import './utils/variables';
+
+@import './base/modern-normalize';
+@import './base/defualts-styles';
+
+@import './components/common/common';
+@import './components/common/section';
+@import './components/common/containter';
+@import './components/common/header';
+@import './components/common/logo';
+@import './components/common/footer';
+@import './components/common/title';
+
+@import './components/studio/hero';
+@import './components/studio/features-list';
+@import './components/studio/activities-list';
+@import './components/studio/team-list';
+@import './components/studio/team-social';
+@import './components/studio/clients-list';
+@import './components/studio/order-modal';
+@import './components/studio/order-form';
+@import './components/studio/agreement';
+
+@import './components/portfolio/works-filters';
+@import './components/portfolio/works-list';
