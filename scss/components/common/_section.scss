@@ -6,10 +6,6 @@
   background-color: var(--secondary-bg-color);
 }
 
-.section--activities {
-  padding-top: 0;
-}
-
 @media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
@@ -21,4 +17,8 @@
   .section--activities {
     display: none;
   }
+}
+
+.section--activities {
+  padding-top: 0;
 }

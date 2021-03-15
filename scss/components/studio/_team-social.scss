@@ -1,6 +1,10 @@
 .team-social {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.team-social__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .team-social__link {
