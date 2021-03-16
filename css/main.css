@@ -875,20 +875,23 @@ body {
 }
 
 .clients-list {
-  margin-right: -30px;
+  margin-top: -30px;
+  margin-left: -30px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .clients-list__item {
-  margin-right: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .clients-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   color: var(--team-svg-color);
   border-radius: 4px;
@@ -898,6 +901,16 @@ body {
 .clients-list__link:hover, .clients-list__link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients-list__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list__link {
+    width: 170px;
+  }
 }
 
 .clients-list__icon {
@@ -1226,10 +1239,6 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-}
-
-.section--clients {
-  display: none;
 }
 
 .page-footer {
