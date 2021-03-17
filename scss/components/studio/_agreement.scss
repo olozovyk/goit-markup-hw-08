@@ -2,7 +2,7 @@
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  margin-left: 13px;
+  // margin-left: 13px;
 }
 
 .agreement__checkbox {
@@ -34,17 +34,16 @@
 }
 
 .agreement__text {
-  display: flex;
-  align-items: center;
-  padding-left: 7px;
+  padding-left: 8px;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
 
 .agreement__link {
+  display: inline;
   color: var(--accent-color);
   text-decoration-line: underline;
 }
