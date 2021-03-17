@@ -2,7 +2,10 @@
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  // margin-left: 13px;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 }
 
 .agreement__checkbox {
@@ -40,10 +43,16 @@
   line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .agreement__link {
   display: inline;
+
   color: var(--accent-color);
   text-decoration-line: underline;
 }
