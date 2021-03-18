@@ -400,9 +400,21 @@ body {
 }
 
 .page-header__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.page-header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .page-header__nav {
+    justify-content: start;
+  }
 }
 
 .page-header__logo {
@@ -410,7 +422,8 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .page-header__menu-wrap {
+  .menu,
+.contacts {
     display: none;
   }
 }
@@ -420,9 +433,9 @@ body {
   background-color: transparent;
   border: none;
   display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 10px;
 }
 .menu-btn:hover .menu-btn__menu, .menu-btn:focus .menu-btn__menu, .menu-btn:hover .menu-btn__close, .menu-btn:focus .menu-btn__close {
   fill: var(--accent-color);
@@ -431,6 +444,89 @@ body {
   .menu-btn {
     display: none;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    margin-left: 88px;
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  transition: color var(--duration) var(--timing-function);
+}
+.menu__link:hover, .menu__link:focus {
+  color: var(--accent-color);
+}
+.menu__link--current {
+  position: relative;
+  color: var(--accent-color);
+}
+.menu__link--current::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: -1px;
+}
+
+.contacts {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__icon--email {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 14px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: currentColor;
+  transition: color var(--duration) var(--timing-function);
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--accent-color);
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .logo {
@@ -1268,14 +1364,28 @@ body {
   text-decoration-line: underline;
 }
 
-.mobile-menu {
+.mobile-menu-wrapper {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
   width: 100vw;
   padding-top: 48px;
   padding-bottom: 48px;
+  transform: translateX(0);
   background-color: var(--main-bg-color);
+  z-index: 11;
+  pointer-events: initial;
   transition: transform var(--duration) var(--timing-function);
 }
 @media screen and (max-width: 479px) {
@@ -1303,20 +1413,29 @@ body {
 
 .mobile-menu__button {
   position: absolute;
-  top: 21px;
+  top: 11px;
   right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   background-color: transparent;
   border: none;
-  transition: fill var(--duration) var(--timing-function);
 }
 @media screen and (min-width: 480px) {
   .mobile-menu__button {
-    right: calc((100% - 480px) / 2 + 25px);
+    right: calc((100% - 480px) / 2 + 15px);
   }
 }
 .mobile-menu__button:hover {
-  fill: var(--accent-color);
   cursor: pointer;
+}
+.mobile-menu__button:hover .mobile-menu__icon, .mobile-menu__button:focus .mobile-menu__icon {
+  fill: var(--accent-color);
+}
+
+.mobile-menu__icon {
+  transition: fill var(--duration) var(--timing-function);
 }
 
 .mobile-nav {
@@ -1340,7 +1459,7 @@ body {
   color: var(--title-text-color);
   transition: color var(--duration) var(--timing-function);
 }
-.mobile-nav__link:hover {
+.mobile-nav__link:hover, .mobile-nav__link:focus {
   color: var(--accent-color);
 }
 
@@ -1372,7 +1491,7 @@ body {
   color: var(--main-text-color);
   transition: color var(--duration) var(--timing-function);
 }
-.mobile-contacts__link--email:hover {
+.mobile-contacts__link--email:hover, .mobile-contacts__link--email:focus {
   color: var(--accent-color);
 }
 

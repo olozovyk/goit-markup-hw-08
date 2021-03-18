@@ -1,13 +1,31 @@
-.mobile-menu {
+.mobile-menu-wrapper {
   position: absolute;
   left: 0;
   top: 0;
 
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  // right: 0;
+  top: 0;
+
+  overflow: hidden;
+
   width: 100vw;
   padding-top: 48px;
   padding-bottom: 48px;
+  transform: translateX(0);
 
   background-color: var(--main-bg-color);
+  z-index: 11;
+  pointer-events: initial;
 
   transition: transform var(--duration) var(--timing-function);
 
@@ -33,22 +51,32 @@
 
 .mobile-menu__button {
   position: absolute;
-  top: 21px;
+  top: 11px;
   right: 5%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   background-color: transparent;
   border: none;
 
-  transition: fill var(--duration) var(--timing-function);
-
   @media screen and (min-width: 480px) {
-    right: calc((100% - 480px) / 2 + 25px);
+    right: calc((100% - 480px) / 2 + 15px);
   }
 
   &:hover {
-    fill: var(--accent-color);
     cursor: pointer;
   }
+
+  &:hover .mobile-menu__icon,
+  &:focus .mobile-menu__icon {
+    fill: var(--accent-color);
+  }
+}
+
+.mobile-menu__icon {
+  transition: fill var(--duration) var(--timing-function);
 }
 
 .mobile-nav {
@@ -73,7 +101,8 @@
 
   transition: color var(--duration) var(--timing-function);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--accent-color);
   }
 }
@@ -109,7 +138,8 @@
 
   transition: color var(--duration) var(--timing-function);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--accent-color);
   }
 }
