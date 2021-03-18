@@ -18,7 +18,11 @@
           >Web<span class="logo__studio logo__studio--black">Studio</span></a
         >
 
-        <button type="button" class="menu-btn page-header__menu-btn">
+        <button
+          type="button"
+          class="menu-btn page-header__menu-btn"
+          data-menu-open
+        >
           <svg class="menu-btn__menu" width="24px" height="16px">
             <use href="./images/icons.svg#menu"></use>
           </svg>
@@ -568,8 +572,8 @@
       </div>
     </footer>
 
-    <div class="mobile-menu">
-      <button type="button" class="mobile-menu__button">
+    <div class="mobile-menu mobile-hidden" data-menu>
+      <button type="button" class="mobile-menu__button" data-menu-close>
         <svg class="mobile-menu__icon" width="19px" height="19px">
           <use href="./images/icons.svg#close"></use>
         </svg>
@@ -725,5 +729,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
