@@ -2,23 +2,50 @@
   position: absolute;
   left: 0;
   top: 0;
+
   width: 100vw;
-  background-color: var(--main-bg-color);
   padding-top: 48px;
-  padding-left: calc((100% - 480px) / 2 + 40px);
   padding-bottom: 48px;
+
+  background-color: var(--main-bg-color);
+
+  @media screen and (max-width: 479px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding-left: calc((100% - 480px) / 2 + 40px);
+    padding-right: calc((100% - 480px) / 2 + 40px);
+  }
 }
 
 .mobile-menu__button {
   position: absolute;
   top: 21px;
-  right: calc((100% - 480px) / 2 + 25px);
+  right: 5%;
+
   background-color: transparent;
   border: none;
+
+  transition: fill var(--duration) var(--timing-function);
+
+  @media screen and (min-width: 480px) {
+    right: calc((100% - 480px) / 2 + 25px);
+  }
+
+  &:hover {
+    fill: var(--accent-color);
+    cursor: pointer;
+  }
 }
 
 .mobile-nav {
   margin-bottom: 302px;
+
+  @media screen and (max-width: 335px) {
+    margin-bottom: 260px;
+  }
 }
 
 .mobile-nav__item:not(:last-child) {
@@ -32,6 +59,12 @@
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .mobile-nav__link--current {
@@ -62,11 +95,22 @@
   letter-spacing: 0.02em;
 
   color: var(--main-text-color);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .mobile-social {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.mobile-social__item {
+  margin-top: 10px;
 }
 
 .mobile-social__link {
@@ -80,13 +124,15 @@
   align-items: center;
 }
 
-.mobile-social__item:not(:last-child) .mobile-social__link::after {
-  content: '';
-  display: inline-flex;
-  width: 1px;
-  height: 22px;
-  background-color: black;
-  margin-left: 10px;
+@media screen and (min-width: 410px) {
+  .mobile-social__item:not(:last-child) .mobile-social__link::after {
+    content: '';
+    display: inline-flex;
+    width: 1px;
+    height: 22px;
+    background-color: var(--mobile-menu-decore);
+    margin-left: 10px;
+  }
 }
 
 .mobile-social__item:not(:last-child) {
