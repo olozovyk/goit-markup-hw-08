@@ -9,10 +9,10 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle('mobile-hidden');
+    refs.modal.classList.toggle('is-open');
 
-    const isModalClose = refs.modal.classList.contains("mobile-hidden");
-    const method = isModalClose ? "enableBodyScroll" : "disableBodyScroll";
+    const isModalClose = refs.modal.classList.contains("is-open");
+    const method = isModalClose ? "disableBodyScroll" : "enableBodyScroll";
     bodyScrollLock[method](refs.modal);
   }
 })();

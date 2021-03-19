@@ -1,31 +1,15 @@
-.mobile-menu-wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  width: 100%;
-  height: 100%;
-
-  overflow: hidden;
-  z-index: 10;
-  pointer-events: none;
-}
-
 .mobile-menu {
-  position: absolute;
-  // right: 0;
+  position: fixed;
   top: 0;
-
-  overflow: hidden;
+  left: 0;
+  transform: translateX(100%);
 
   width: 100vw;
+  height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
-  transform: translateX(0);
 
   background-color: var(--main-bg-color);
-  z-index: 11;
-  pointer-events: initial;
 
   transition: transform var(--duration) var(--timing-function);
 
@@ -44,8 +28,8 @@
   }
 }
 
-.mobile-hidden {
-  transform: translateX(100%);
+.mobile-menu.is-open {
+  transform: translateX(0);
   transition: transform var(--duration) var(--timing-function);
 }
 

@@ -57,6 +57,20 @@
   letter-spacing: 0.03em;
 }
 
+.team-list__thumb {
+  max-height: 460px;
+
+  @media screen and (min-width: 768px) {
+    height: 374px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 260px;
+  }
+}
+
 .team-list__photo {
+  display: block;
   width: 100%;
+  height: auto;
 }
