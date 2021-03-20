@@ -99,4 +99,8 @@
   text-align: center;
 
   color: var(--title-text-color);
+
+  @media screen and (max-width: 1199px) {
+    line-height: 1.5;
+  }
 }

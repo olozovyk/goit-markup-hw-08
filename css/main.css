@@ -1494,6 +1494,12 @@ body {
   color: var(--title-text-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .order__call {
+    line-height: 1.5;
+  }
+}
+
 .form__group {
   margin-bottom: 10px;
   display: -webkit-box;
