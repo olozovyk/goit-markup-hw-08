@@ -86,6 +86,13 @@
   .works-list__link:focus & {
     transform: translateY(-100%);
   }
+
+  @media screen and (max-width: 440px) {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    font-size: 14px;
+  }
 }
 
 .works-list__content {
