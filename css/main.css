@@ -381,17 +381,21 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  min-width: 320px;
-  max-width: 480px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
-    max-width: 768px;
+    min-width: 320px;
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
