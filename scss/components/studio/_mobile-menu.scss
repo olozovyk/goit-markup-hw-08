@@ -4,10 +4,13 @@
   left: 0;
   transform: translateX(100%);
 
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   padding-top: 48px;
-  padding-bottom: 48px;
+  // padding-bottom: 48px;
+  padding-bottom: 90px;
 
   background-color: var(--main-bg-color);
 
@@ -64,7 +67,9 @@
 }
 
 .mobile-nav {
-  margin-bottom: 302px;
+  // margin-bottom: 302px;
+  margin-bottom: 100px;
+  flex-grow: 1;
 }
 
 .mobile-nav__item:not(:last-child) {
