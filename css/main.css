@@ -1064,7 +1064,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 1600px;
+    max-width: 100%;
     background-image: -webkit-gradient(linear, left top, right top, from(var(--hero-overlay-color)), to(var(--hero-overlay-color))), url(../images/hero/hero-img-1600.jpg);
     background-image: linear-gradient(to right, var(--hero-overlay-color), var(--hero-overlay-color)), url(../images/hero/hero-img-1600.jpg);
   }
